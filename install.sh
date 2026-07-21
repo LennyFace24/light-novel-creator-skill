@@ -1,8 +1,6 @@
 #!/usr/bin/env bash
 set -euo pipefail
-SKILL="novel-persistence-skill"
-DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-DRY=false;PLAT="";PD="${PROJECT_DIR:-$(pwd)}"
+SKILL="novel-persistence-skill";DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)";DRY=false;PLAT="";PD="${PROJECT_DIR:-$(pwd)}"
 usage(){echo "用法: install.sh [--platform <n>] [--project-dir <p>] [--dry-run]";echo "平台: claude copilot cursor windsurf gemini cline roo-code all";}
 inst(){echo "  → $1";[ "$DRY" = false ]&&{mkdir -p "$(dirname "$1")";cp -R "$DIR" "$1";echo "  ✅";};}
 while[[$#-gt0]];do case "$1" in --platform)PLAT="$2";shift2;;--project-dir)PD="$2";shift2;;--dry-run)DRY=true;shift;;--help)usage;exit0;;*)echo "未知:$1";usage;exit1;;esac;done
