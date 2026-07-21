@@ -1,0 +1,1 @@
+{"name":"novel-persistence-skill","version":"1.6.0","description":"长篇小说AI分卷创作持久化规范执行。含强制串行创作、下一话锁定、有效增量检测、描写堆砌判定(>30%)、强制续写、三级大纲。","author":"agent-skill-creator","license":"MIT","type":"skill","entry":"SKILL.md"}
