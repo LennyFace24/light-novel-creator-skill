@@ -1,4 +1,4 @@
-# light-novel-creator-skill 📚 v1.7
+# light-novel-creator-skill
 
 **长篇小说AI分卷创作·持久化规范执行技能**
 
