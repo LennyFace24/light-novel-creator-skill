@@ -63,7 +63,7 @@ ft=[]
 if os.path.exists(tf):
     with open(tf)as f:
         for i,l in enumerate(f,1):
-            if re.match(r"^第\d+章\s",l.strip()):ft.append(f"L{i}:第X章→第X话:{l.strip()}")
+            if re.match(r"^第\d+章\s",l.strip()):ft.append(f"L{i}:应为第X话:{l.strip()}")
 r("格式",len(ft)==0,ft)
 si=[]
 for r,_,fs in os.walk(vd):

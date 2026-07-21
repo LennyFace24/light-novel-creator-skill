@@ -1,1 +1,1 @@
-{"name":"novel-persistence-skill","version":"1.8.0","description":"长篇小说AI分卷创作持久化规范执行。含扩写方向智能分流(完成度诊断)、强制串行、有效增量检测、三级大纲。","author":"agent-skill-creator","license":"MIT","type":"skill","entry":"SKILL.md"}
+{"name":"novel-persistence-skill","version":"2.0.0","description":"长篇小说AI分卷创作·双规范技能。持久化架构+轻小说写作风格(叙事/语言/节奏/角色/战斗)。","author":"agent-skill-creator","license":"MIT","type":"skill","entry":"SKILL.md"}

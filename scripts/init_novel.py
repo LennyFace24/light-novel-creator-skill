@@ -15,5 +15,5 @@ vd=f"Volume_01_{a.volume_name}";os.makedirs(os.path.join(a.project_dir,vd),exist
 for f in VF:
     d=os.path.join(a.project_dir,vd,f.replace("Volume_XX","Volume_01"))
     if not os.path.exists(d):shutil.copy2(os.path.join(T,f),d)
-open(os.path.join(a.project_dir,"字数分配表.md"),"w",encoding="utf-8").write(f"# 字数分配表\n卷:{n}\n字数:{wmin:,}-{wmax:,}\n话数:{ch}\n节拍:{ch*3}\n单话:~{wmax//ch:,}")
+open(os.path.join(a.project_dir,"字数分配表.md"),"w",encoding="utf-8").write(f"# 字数分配\n卷:{n}\n字数:{wmin:,}-{wmax:,}\n话数:{ch}\n节拍:{ch*3}")
 print("✅")
