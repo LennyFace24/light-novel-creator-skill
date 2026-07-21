@@ -6,7 +6,7 @@ VF=["Volume_XX_text.md","Volume_XX_characters.md","Volume_XX_summary.md"]
 VT={"opening":("开篇首卷",60000,90000,12),"main":("主线正篇卷",65000,85000,12),"daily":("日常过渡卷",50000,70000,10),"climax":("高潮决战卷",80000,100000,14)}
 p=argparse.ArgumentParser();p.add_argument("project_dir");p.add_argument("--volume-name",default="第一卷");p.add_argument("--volume-type",choices=list(VT.keys()),default="opening");p.add_argument("--total-words",type=int,default=0)
 a=p.parse_args()
-if not os.path.isdir(a.project_dir):print(f"❌");exit(1)
+if not os.path.isdir(a.project_dir):print("❌");exit(1)
 n,wmin,wmax,ch=VT[a.volume_type]
 for f in GF:
     d=os.path.join(a.project_dir,f)

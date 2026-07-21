@@ -19,7 +19,7 @@ def er(text):
         s=s.strip()
         if not s:continue
         ha=any(w in s for w in['说','道','想','走','看','拿','放','战斗','攻击'])
-        hd='「' in s or'"'in s
+        hd='「'in s or'"'in s
         ie=any(k in s for k in ek)and not ha and not hd
         run=run+1 if ie else 0
         if run>=3:pad+=len(s)
@@ -28,7 +28,7 @@ def er(text):
     return max(0.0,(t-pad)/t)
 p=argparse.ArgumentParser();p.add_argument("project_dir");p.add_argument("volume")
 a=p.parse_args();vd=os.path.join(a.project_dir,a.volume)
-if not os.path.isdir(vd):print(f"❌");sys.exit(1)
+if not os.path.isdir(vd):print("❌");sys.exit(1)
 vid=a.volume[:9];ok=True
 def r(n,pa,is_,info=False):
     global ok
@@ -37,7 +37,7 @@ def r(n,pa,is_,info=False):
     if not pa and not info:ok=False
     print()
 cf=os.path.join(vd,f"{vid}_characters.md");tf=os.path.join(vd,f"{vid}_text.md");sf=os.path.join(vd,f"{vid}_summary.md")
-r("人设",os.path.exists(cf),[f"角色卡不存在"]if not os.path.exists(cf)else[])
+r("人设",os.path.exists(cf),["角色卡不存在"]if not os.path.exists(cf)else[])
 tl=os.path.join(a.project_dir,"global_timeline.md");ti=[]
 if os.path.exists(tl):
     with open(tl)as f:
